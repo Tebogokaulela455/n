@@ -1,0 +1,111 @@
+@import "./breakpoints.scss";
+
+$pinkred: #F8395A;
+$blue: #24355A;
+$lightgrey: #efefef;
+$grey: #7c7c7c;
+$darkgrey: #5b5b5b;
+
+.categories_content {
+  margin: 0;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(230, 248, 255, 0.596);
+
+  @include sm {
+    padding: 50px 20px;
+  }
+
+  h1 {
+    color: rgb(34, 34, 34);
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px #fff;
+  }
+
+  p {
+    max-width: 700px;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px #181818;
+  }
+
+  .categories_list {
+    margin: auto;
+    width: 100%;
+    padding: 50px 0;
+
+    .slick-prev:before,
+    .slick-next:before {
+      margin: 2px;
+      font-family: 'slick';
+      font-size: 30px;
+      line-height: 1;
+      opacity: .75;
+      color: $pinkred;
+      @include sm {
+        display: none;
+      }
+
+    }
+
+    .category {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      width: 291px;
+      height: 219px;
+      cursor: pointer;
+
+
+      &_icon {
+        position: relative;
+        color: white;
+
+        .icon {
+          font-size: 60px;
+        }
+
+        p {
+          font-weight: 600;
+          text-transform: capitalize;
+          color: inherit;
+          text-decoration: none;
+          font-family: "Open Sans", sans-serif;
+        }
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.55);
+        transition: 0.3s ease-in-out;
+        border-radius: 10px;
+      }
+
+      &:hover {
+        .overlay {
+          background-color: rgba(23, 21, 21, 0.164);
+        }
+      }
+
+      @include sm {
+        margin: auto;
+      }
+    }
+  }
+}

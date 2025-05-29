@@ -1,0 +1,156 @@
+@import "./breakpoints.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+$pinkred: #fe5c77;
+$blue: #343c4c;
+$lightgrey: #c1c1c1;
+$grey: #7c7c7c;
+$darkgrey: #5b5b5b;
+
+
+
+.navbar {
+  padding: 10px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color:rgba(230, 248, 255, 0.596);
+  
+
+  @include sm {
+    padding: 10px 20px;
+  }
+
+  img {
+    width: 100px;
+    cursor: pointer;
+  }
+
+  &_search {
+    border: 1px solid #5c9da9b9;
+    border-radius: 30px;
+    height: 50px;
+    padding: 0px 20px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background: #eeeeee;
+    font-family: 'Poppins', sans-serif;
+
+    input {
+      border: none;
+      outline: none;
+      background: transparent;
+      color: #000000;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    &:hover {
+      box-shadow: 0 1px 10px 3px rgb(255, 255, 255);
+    }
+
+    .navbar_search_svg {
+      fill: #000000;
+    }
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  &_right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .host {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 5px;
+      text-shadow: 1px 1px 2px #242424;
+      font-family: 'Poppins', sans-serif;
+
+      &:hover {
+        border: 1px solid #ffffffd6;
+        border-radius: 10px;
+        color: $pinkred;
+        text-shadow: 1px 1px 2px #d1d1d1;
+      }
+      @include sm {
+        display: none;
+      }
+    }
+
+    &_account {
+      color: #fff;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      gap: 15px;
+      background-color:rgba(230, 248, 255, 0.596);
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      &:hover {
+        box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &_dropdownmenu {
+      position: absolute;
+      background-color:rgba(230, 248, 255, 0.86);
+      right: 60px;
+      top: 80px;
+      display: flex;
+      flex-direction: column;
+      width: 219px;
+      padding: 10px 0;
+      border: 1px solid $lightgrey;
+      border-radius: 20px;
+      box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+
+      @include sm {
+        right: 20px;
+      }
+
+      a {
+        width: 100%;
+        padding: 8px 15px;
+        text-decoration: none;
+        color: $blue;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px #d6d6d6;
+        font-family: 'Poppins', sans-serif;
+
+        &:hover {
+          color: $pinkred;
+        }
+      }
+    }
+  }
+}
+
+
+
+@mixin buttonStyle {
+  padding: 10px 15px;
+  background-color: $pinkred;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+  border-radius: 10px;
+}
