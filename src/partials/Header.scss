@@ -1,0 +1,86 @@
+@import "./breakpoints.scss";
+
+$pinkred: #F8395A;
+
+.header_container {
+    margin: auto;
+    min-height: 55vh;
+    width: 100%;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.245),
+            rgba(0, 0, 0, 0.521)),
+        url("../../public/assets/header-banner.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.header_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    &_host {
+        color: #fff;
+        margin: 50px auto;
+        text-transform: capitalize;
+        text-shadow: 1px 1px 2px #181818;
+        text-align: center;
+    }
+
+    &_become_host {
+        text-align: center;
+        margin: 10px auto;
+        a {
+            color: #fff;
+            text-decoration: none;
+            background-color: #F8395A;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 1px 1px 2px #2d2d2d;
+
+            &:hover {
+                box-shadow: 0 1px 10px 3px rgba(255, 255, 255, 0.677);
+            }
+        }
+        @include sm {
+            margin-bottom: 20px;
+        }
+    }
+
+    &_welcome_message {
+        color: #fff;
+        margin: 50px auto;
+        text-shadow: 1px 1px 2px #181818;
+        text-align: center;
+    }
+
+    &_website_desc {
+        margin: 0 auto 20px;
+        text-align: center;
+        width: 80%;
+        color: #fff;
+        font-size: x-large;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px #181818;
+
+    }
+
+    &_join_message {
+        text-align: center;
+        margin: 20px auto;
+        color: #fff;
+        text-shadow: 1px 1px 2px #181818;
+        a {
+            color: $pinkred;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px #181818;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}

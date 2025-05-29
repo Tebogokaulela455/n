@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+$primary-font: 'Poppins', sans-serif;
+$primary-color: #9b59b6;
+$secondary-color: #71b7e6;
+$background-gradient: linear-gradient(135deg, #1F214D, #50366F,#BF3475, #EE6C45, #FFCE61,#FFE58A);
+
+
+
+.register {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: url("../../public/assets/register.jpg") center;
+  background-size: cover;
+}
+
+.register_container {
+  max-width: 700px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2.5px);
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+
+  .title {
+    font-family: $primary-font;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+  hr {
+    margin: auto;
+    height: 5px;
+    width: 50%;
+    border-radius: 5px;
+    border-style: none;
+    background: $background-gradient;
+  }
+ 
+}
+
+
+.register_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    .user-details {
+      font-family: $primary-font;
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px 0 12px 0;
+
+      .input-box {
+        font-family: $primary-font;
+        margin-bottom: 15px;
+        width: calc(100% / 2 - 20px);
+
+        span.details {
+          font-family: $primary-font;
+          color: #fff;
+          display: block;
+          font-weight: 500;
+          margin-bottom: 5px;
+        }
+
+        input {
+          font-family: $primary-font;
+          height: 45px;
+          width: 100%;
+          outline: none;
+          font-size: 16px;
+          border-radius: 5px;
+          padding-left: 15px;
+          border: 1px solid #ccc;
+          border-bottom-width: 2px;
+          transition: all 0.3s ease;
+
+          &:focus,
+          &:valid {
+            border-color: $primary-color;
+          }
+        }
+      }
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .profile-picture {
+      border-radius: 5px;
+      border: solid;
+      border-color:#fff0ba8f;
+      width: 60%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      label {
+        font-family: $primary-font;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        p {
+          margin: 5px;
+          color: #fff;
+        }
+
+        img {
+          margin: 5px;
+        }
+
+      }
+    }
+
+    .button {
+      height: 45px;
+      margin: 35px 0;
+
+      button {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        color: #000000;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: #fff;
+        font-family: $primary-font;
+
+        &:hover {
+          background: linear-gradient(-135deg,  #1F214D, #50366F,#BF3475, #EE6C45, #FFCE61,#FFE58A);
+        }
+      }
+    }
+    .already-signedUP {
+      
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      margin: auto;
+  
+      a{
+        font-family: $primary-font;
+        color: #fff;
+        font-weight: 600;
+  
+        &:hover {
+          color: #ffb9a4;
+        }
+      }
+    }
+  }
+  
+}
+
+// media queries for mobile responsiveness
+@media (max-width: 584px) {
+  body {
+    height: 100vh;
+  }
+
+  .register_container {
+    max-width: 100%;
+    max-height: 80%;
+  }
+
+  form {
+
+    .user-details {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .input-box {
+        input {
+          width: 100%;
+          margin: auto;
+        }
+      }
+    }
+
+    .user-details {
+      width: 100%;
+    }
+  }
+  .already-signedUP {
+    width: 65%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    height: 100vh;
+  }
+
+  .register_container {
+    max-width: 100%;
+    max-height: 80%;
+  }
+
+  form {
+
+    .user-details {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .input-box {
+        input {
+          width: 100%;
+          margin: auto;
+        }
+      }
+    }
+
+    .user-details {
+      width: 100%;
+    }
+  }
+}

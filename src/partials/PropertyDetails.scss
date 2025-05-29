@@ -1,0 +1,348 @@
+@import "./breakpoints.scss";
+
+$pinkred: #F8395A;
+$blue: #24355A;
+$lightgrey: #d7d7d7;
+$grey: #7c7c7c;
+$darkgrey: #626262;
+
+.propertyDetails-container {
+  background-image: url("../../public/assets/propertyDetails-bg.jpg");
+
+  .listing-container {
+    padding: 40px 60px 120px;
+
+
+
+    @include xl {
+      padding: 40px 80px 120px;
+    }
+
+    @include lg {
+      padding: 40px 50px 120px;
+    }
+
+    @include sm {
+      padding: 40px 5px 120px;
+    }
+
+    .listing-content {
+      background-color: rgba(196, 235, 251, 0.515);
+      border-radius: 20px;
+      padding: 10px;
+
+      .propertyTitle-container {
+
+        .photos {
+          padding: 30px 20px;
+          border-radius: 10px;
+          margin: 20px auto !important;
+          width: 80% !important;
+
+
+          .slick-prev:before,
+          .slick-next:before {
+            font-family: 'slick';
+            font-size: 30px;
+            line-height: 1;
+            opacity: .75;
+            color: rgb(34, 34, 34);
+
+            @include sm {
+              display: none;
+            }
+
+          }
+
+          .images {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            /* Increased gap for more space between images */
+            width: 291px;
+            height: 219px;
+            overflow: hidden;
+            /* Prevent overflow of images */
+            box-sizing: border-box;
+            /* Ensure padding and border are included in the width and height */
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              box-sizing: border-box;
+
+            }
+
+          }
+
+
+        }
+
+        .property-title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          @include sm {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+          }
+
+          .title {
+            font-size: 20px;
+
+            margin: 5px;
+            text-transform: capitalize;
+            color: rgb(34, 34, 34);
+
+            @include sm {
+              font-size: 26px;
+            }
+          }
+
+          .save {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+
+            p {
+              font-size: 20px;
+              font-weight: 700;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .informations-booking {
+        margin-top: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+
+        .listing-informations {
+          width: 100%;
+
+          .listing-info {
+            font-size: 20px;
+            margin: 10px;
+            color: rgb(34, 34, 34);
+          }
+
+          .listing-info-p {
+            color: rgb(34, 34, 34);
+            font-size: 15px;
+            font-weight: 602;
+            max-width: 800px;
+            margin: 20px;
+          }
+
+          .about {
+            color: rgb(34, 34, 34);
+            font-size: 15px;
+            font-weight: 500;
+            max-width: 800px;
+            margin: 20px;
+
+            p {
+              margin: 15px;
+            }
+
+            hr {
+              margin: 50px auto;
+              width: 95%;
+              border: 1px solid #7c7c7c6c;
+
+            }
+          }
+
+          .highlits {
+            color: rgb(34, 34, 34);
+            font-size: 15px;
+            font-weight: 500;
+            max-width: 800px;
+            margin: 20px;
+
+            p {
+              margin: 15px;
+            }
+          }
+
+          .creator-profile {
+            margin: 50px auto 20px 10px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            text-transform: capitalize;
+            border-radius: 15px;
+            border: 2px solid white;
+            background-color: rgba(230, 248, 255, 0.596);
+            width: fit-content;
+            padding: 10px;
+
+
+            img {
+              width: 60px;
+              height: 60px;
+              border-radius: 50px;
+              border: 2px solid $pinkred;
+            }
+          }
+
+          .amenities {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 30px 0;
+            max-width: 700px;
+
+
+            &_title {
+              margin: 10px;
+
+            }
+
+            &_content {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: space-between;
+              padding: 30px;
+              border: 3px solid white;
+              border-radius: 10px;
+              background-color: rgba(230, 248, 255, 0.596);
+
+              .facility {
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                font-size: 18px;
+                font-weight: 600;
+
+                &_icon {
+                  font-size: 30px;
+                  margin-right: 10px;
+                  text-align: center;
+                }
+
+                p {
+                  font-weight: 400;
+                  text-align: center;
+                  margin: 0;
+                }
+              }
+
+            }
+
+            @include sm {
+              grid-column-gap: 20px;
+            }
+          }
+        }
+
+        .booking {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: rgba(230, 248, 255, 0.596);
+          border-radius: 20px;
+          height: 738px;
+          padding: 15px;
+          color: rgb(34, 34, 34);
+
+
+
+          &_title {
+            margin: 20px auto 0px;
+            text-align: center;
+            text-shadow: 1px 1px 2px #2424243a;
+          }
+
+          .date-range-calendar {
+            margin: 10px;
+            width: 400px;
+
+            @include sm {
+              width: 100%;
+              margin: auto;
+
+            }
+
+            .rdrCalendarWrapper {
+              margin: 10px auto 20px;
+            }
+
+            .rdrCalendarWrapper,
+            .rdrDateDisplayWrapper {
+              display: flex;
+              flex-direction: column;
+              border-radius: 20px;
+              border: 2px solid white;
+            }
+
+            .rdrMonth {
+              padding: 4px;
+              font-size: 14px !important;
+              width: 98% !important;
+            }
+
+            .rdrNextPrevButton {
+              @include sm {
+                display: none;
+              }
+            }
+
+            .rdrMonths {
+              display: flex !important;
+              justify-content: center !important;
+
+              .rdrMonth,
+              .rdrWeekDays,
+              .rdrDays {
+                @include sm {
+                  font-size: 12px !important;
+                  width: 95%;
+                }
+              }
+            }
+
+          }
+
+          .book-button {
+            width: 100%;
+            margin: 30px auto 0;
+            color: #fff;
+            background-color: #F8395A;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+
+            @include sm {
+              width: 55%;
+              margin: auto;
+
+            }
+
+          }
+
+        }
+
+        @include sm {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          padding: 2px;
+          font-size: 12px; // Smaller font size for mobiles
+        }
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,10 @@
+PORT=5000
+MONGO_URI=mongodb+srv://tebogoanthony455:<Tebogo1234@>@cluster0.g5vuwlv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+
+JWT_SECRET=ea4d5ffc5e97d1833e9bcf45e22e0010ecbc57e186fddda23dd03c4901e7cad2b3df9ac7c490879e38c4a4c05dda770cdbc66d6083382426a429da63ea5a027a
+
+
+CLOUDINARY_API_KEY=659775315587775
+CLOUDINARY_API_SECRET=7fEGUqJDMTzbQ3qa8J9mooeUl1s
+CLOUDINARY_CLOUD_NAME=dtlqgxzbl

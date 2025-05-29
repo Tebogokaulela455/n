@@ -1,0 +1,56 @@
+@import "./breakpoints.scss";
+
+$pinkred: #F8395A;
+$blue: #24355A;
+$lightgrey: #efefef;
+$grey: #7c7c7c;
+$darkgrey: #626262;
+
+.main-container {
+  margin: 0;
+  height: 100vh;
+}
+
+
+.booking-container {
+  padding: 10px;
+  color: $blue;
+
+
+  h2 {
+    text-align: center;
+    color: $blue;
+    margin: 20px auto;
+  }
+
+  hr {
+    margin: 10px auto;
+    border: solid;
+    border-color: $pinkred;
+    border-radius: 5px;
+    width: 80%;
+  }
+
+  @include sm {
+    margin: auto;
+  }
+}
+
+.booking-content {
+  border-radius: 10px;
+  background-color: #efefef80;
+  height: 100vh;
+
+  .booking-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    gap: 10px;
+
+
+
+    @include xl {
+      padding: 0 20px 120px;
+    }
+  }
+}

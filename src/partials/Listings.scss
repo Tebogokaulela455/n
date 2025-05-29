@@ -1,0 +1,101 @@
+@import "./breakpoints.scss";
+
+$pinkred: #F8395A;
+$blue: #24355A;
+$lightgrey: #efefef;
+$grey: #7c7c7c;
+$darkgrey: #626262;
+
+.category_container {
+  background-color: rgba(230, 248, 255, 0.596);
+  padding: 20px;
+}
+
+.listings {
+  padding: 40px 50px 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+
+  @include lg {
+    padding: 0 20px 120px;
+  }
+
+}
+
+.divider {
+  border: 1px solid rgba(124, 124, 124, 0.12);
+  margin: 20px;
+}
+
+.listing-title {
+  color: rgb(34, 34, 34);
+  font-size: 30px;
+  font-weight: 800;
+  text-shadow: 1px 1px 2px #fff;
+  text-align: center;
+
+}
+
+.category-list {
+  padding: 50px 80px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+
+  @include sm {
+    padding: 50px 20px;
+  }
+
+  .category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 90px;
+    border: 1px solid $grey;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    .listing-icon {
+      font-size: 30px;
+      color: $grey;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      color: $grey;
+    }
+
+    &:hover {
+
+      background-color: $lightgrey;
+
+    }
+  }
+
+  .selected {
+    color: $pinkred;
+    border: 1.5px solid;
+    border-color: #F8395A;
+    background-color: $lightgrey;
+  }
+
+}
+
+.listing-details {
+  .listingT {
+    color: rgb(34, 34, 34);
+    font-size: 30px;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px #fff;
+    text-align: center;
+  }
+}
